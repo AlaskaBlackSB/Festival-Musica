@@ -1,0 +1,28 @@
+@mixin telefono{
+    @media (min-width: $telefono){
+        @content;
+    }
+}
+@mixin tablet{
+    @media (min-width: $tablet){
+        @content;
+    }
+}
+@mixin desktop{
+    @media (min-width: $desktop){
+        @content;
+    }
+}
+
+@mixin gridColum($repeat, $fr, $column-gap) {
+    display: grid;
+    grid-template-columns: repeat($repeat, $fr);
+    column-gap: $column-gap;
+}
+
+@mixin gridRow($repeat, $fr, $column-gap) {
+    display: grid;
+    grid-template-row: repeat($repeat, $fr);
+    row-gap: $column-gap;
+    // align-items: center;
+}

@@ -1,0 +1,49 @@
+.sobre-festival{
+    // @include gridRow(2, 1fr, $separacion);
+
+    padding: $separacion 0;
+    text-align: center; 
+
+    @include tablet{
+        text-align: start;
+        // @include gridColum(2, 1fr, $separacion);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .imagen{
+            flex: 1;
+            margin-right: 5rem;
+        }
+        .contenido-festival{
+            flex: 1;
+        }
+    }
+}
+
+.contenido-festival{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 2rem;
+
+    @include tablet{
+        padding-top: 0;
+
+        .texto{
+            margin-bottom: 0;
+            margin-top: 0;
+        }
+    }
+
+    h2{
+        font-size: 3rem;
+    }
+
+    .fecha{
+        color: $rosa;
+        font-weight: $bold;
+    }
+    .texto{
+        line-height: 1.5;
+    }
+}
